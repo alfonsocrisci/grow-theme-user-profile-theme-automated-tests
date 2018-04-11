@@ -10,6 +10,14 @@
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
 	<@liferay_util["include"] page=top_head_include />
+
+	<link rel="stylesheet" href="${javascript_folder}/libs/jasmine-3.1.0/jasmine.css">
+
+	<script src="${javascript_folder}/libs/jasmine-3.1.0/jasmine.js"></script>
+
+	<script src="${javascript_folder}/libs/jasmine-3.1.0/jasmine-html.js"></script>
+
+	<script src="${javascript_folder}/libs/jasmine-3.1.0/boot.js"></script>
 </head>
 
 <body class="${css_class}">
