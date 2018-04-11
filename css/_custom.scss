@@ -1,0 +1,145 @@
+@import "portlet_decorator";
+
+$bg-color: #FFF;
+$solid-color: #365D9E;
+
+body {
+	background-color: $bg-color;
+}
+
+.portlet-topper {
+	z-index: 1;
+}
+
+#userCard .user-container {
+	background-color: $bg-color;
+	padding: 10px;
+	position: relative;
+
+	@include sm {
+		margin-bottom: 20px;
+		padding: 20px;
+	}
+
+	.user-info {
+		position: relative;
+		z-index: 1;
+
+		.user-icon {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+.site-navigation .portlet {
+	&, .portlet-body > .navbar {
+		margin-bottom: 0;
+	}
+
+	.navbar-blank {
+		float: none;
+
+		> li {
+			float: none;
+
+			& > a {
+				color: $solid-color;
+				padding: 14px;
+			}
+
+			&:hover, &.hover, &.active, .dropdown-menu .active {
+				& > a {
+					color: #000;
+				}
+			}
+
+			&.open > a:focus {
+				@include tab-focus;
+			}
+		}
+	}
+}
+
+
+.modify-pages .delete-tab {
+	height: 20px;
+	top: 22px;
+}
+
+/* ==Start custom theme modifications== */
+
+/* == Start styles on the whole page== */
+
+#wrapper {
+	padding-top: 3rem;
+}
+
+#userCard {
+	padding-left: 0;
+}
+
+#content {
+	padding-right: 0;
+
+	a {
+		color: #03a9f4; /* same color of Grow theme */
+	}
+
+	a:link {/* unvisited links */
+		color: #03a9f4;
+	}
+
+	a:visited {/* visited links */
+		color: #6a708b;
+	}
+	a:hover {/* user hovers */
+		color: #03a9f4;
+	}
+}
+
+.portlet-column-content.empty{
+	padding: 0;
+}
+
+h6, .h6 {
+	font-size: 16px;
+}
+
+h6 > span {
+	font-size: 12px;
+}
+
+.loop-icon > svg {
+	background-color: #1f7aff;
+	border-radius: 50%;
+	margin-right: 12px;
+	padding: 3px;
+	fill: #fff;
+	width: 1.2em;
+	height: 1.2em;
+	margin-top: 3px;
+}
+
+.truncate-text {
+	display: inline;
+}
+.panel {
+	padding: 0.5rem;
+}
+/* == End styles on the whole page== */
+
+/* == Start styles on Activities portlet== */
+
+.activities-icon {
+    padding: 5px;
+    color: #808080;
+}
+
+#p_p_id_com_liferay_owxp_subscribe_portlet_OWXPSubscribePortlet_ .portlet-content {
+	padding-left: 0.6rem;
+}
+
+/* == End styles on Activities portlet== */
+
+/* ==End custom theme modifications== */
