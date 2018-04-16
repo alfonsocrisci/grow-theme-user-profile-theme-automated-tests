@@ -88,6 +88,8 @@
 
 <script src="${javascript_folder}/libs/jasmine-3.1.0/jasmine-jquery.js"></script>
 
+<script src="${javascript_folder}/tests/user-profile-theme-tests.js"></script>
+
 </body>
 
 </html>
