@@ -9,12 +9,8 @@
  */
  $(function() {
     describe('User Profile Theme', function() {
-        /* Tests to make sure that the
-         * allFeeds variable has been defined and that it is not
-         * empty. Experiment with this before you get started on
-         * the rest of this project. What happens when you change
-         * allFeeds in app.js to be an empty array and refresh the
-         * page?
+        /* Uses Jasmine-jquery
+         * Ensures the User Profile Theme is available in the <head> through its Liferay themeId
          */
         it('is present on page', function() {
             expect($('head')).toContainText('frontenduserprofilegrow_WAR_growthemeuserprofile');
