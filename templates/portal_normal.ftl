@@ -86,6 +86,8 @@
 
 <@liferay_util["include"] page=bottom_include />
 
+<script src="${javascript_folder}/libs/jasmine-3.1.0/jasmine-jquery.js"></script>
+
 </body>
 
 </html>
