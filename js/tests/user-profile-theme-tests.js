@@ -17,4 +17,12 @@
         });
     });
 
+    describe('Activities portlet', function() {
+        /* Uses Jasmine-jquery
+         */
+        it('is present on page', function() {
+            expect('#portlet_com_liferay_social_activities_web_portlet_SocialActivitiesPortlet').toBeInDOM();
+        });
+    });
+
 }());
