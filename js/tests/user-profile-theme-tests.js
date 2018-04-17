@@ -15,6 +15,13 @@
         it('is present on page', function() {
             expect($('head')).toContainText('frontenduserprofilegrow_WAR_growthemeuserprofile');
         });
+
+         /* Ensures the page has the intended col-md-3 / col-md-9 layout
+         */
+        it('has the intended layout', function() {
+            expect($('aside')).toHaveClass('col-md-3');
+            expect($('section')).toHaveClass("col-md-9");
+        });
     });
 
     describe('Activities portlet', function() {
