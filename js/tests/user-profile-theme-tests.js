@@ -41,6 +41,11 @@
             //Check for strings equality
             expect(urlUserName).toEqual(activitiesPortletUserName);
         });
+
+        it('has text with 16px font size', function() {
+            expect($('h6')).toHaveCss({"font-size": "16px"});
+        });
+
     });
 
 }());
