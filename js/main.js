@@ -42,7 +42,7 @@ var elemEditedActivity = $('font:contains("Updated")');
 var elemCommentedActivity = $('font:contains("Commented")');
 var elemMovedToTrashActivity = $('font:contains("Removed")');
 
-$(elemCreatedActivity).prepend('<i class="icon-plus-sign activities-icon"></i>');
-$(elemEditedActivity).prepend('<i class="icon-edit activities-icon"></i>');
-$(elemCommentedActivity).prepend('<i class="icon-comment activities-icon"></i>');
-$(elemMovedToTrashActivity).prepend('<i class="icon-trash activities-icon"></i>');
+elemCreatedActivity.prepend('<i class="icon-plus-sign activities-icon"></i>');
+elemEditedActivity.prepend('<i class="icon-edit activities-icon"></i>');
+elemCommentedActivity.prepend('<i class="icon-comment activities-icon"></i>');
+elemMovedToTrashActivity.prepend('<i class="icon-trash activities-icon"></i>');

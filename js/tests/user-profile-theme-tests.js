@@ -47,6 +47,16 @@
             expect($('h6')).toHaveCss({"font-size": "16px;"});
         });
 
+        // [jasmine-jquery]
+        it('has views text with 12px font size', function() {
+            expect($('h6 > span')).toHaveCss({"font-size": "12px;"});
+        });
+
+        // [jasmine-jquery]
+        it('shows the icons next to the actions for the Wiki articles', function() {
+            expect($('i[class$="activities-icon"]')).toBeVisible();
+        });
+
     });
 
 }());
