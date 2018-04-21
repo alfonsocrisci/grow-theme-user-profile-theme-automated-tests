@@ -74,14 +74,14 @@
         /* Checks the current URL + /web/ and compares it
         to the URLs in the Activities portlet*/
         it('has hyperlinks pointing to valid URLs', function() {
-            var siteURL = window.location.protocol + "//" + window.location.host;
+            var siteURL = window.location.protocol + "//" + window.location.host; // get current site
             var wikis = $('strong').find('a');
 
             wikis.each(function() {
-                var hrefs = $(this).attr('href');
-                var trimmedhrefs = hrefs.slice(0, hrefs.indexOf("/web"));
+                var hrefs = $(this).attr('href'); // get Wiki URLs
+                var trimmedhrefs = hrefs.slice(0, hrefs.indexOf("/welcome")); // trim Wiki urls to site URL
 
-                expect(trimmedhrefs).toEqual(siteURL);
+                expect(trimmedhrefs).toEqual(siteURL); // compare Wiki site with current site
 
             });
 
