@@ -57,6 +57,19 @@
             expect($('i[class$="activities-icon"]')).toBeVisible();
         });
 
+        // [jasmine-jquery]
+        /* This spec will only run of at least one tag container
+        element is on the page*/
+        it('has visible tags', function() {
+            var tagContainer = $('.badge.badge-default.badge-sm');
+
+            if (tagContainer.length > 0) {
+                expect(tagContainer).toBeVisible();
+            } else {
+                return;
+            }
+        });
+
     });
 
 }());
