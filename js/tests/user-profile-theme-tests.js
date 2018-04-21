@@ -66,8 +66,15 @@
             if (tagContainer.length > 0) {
                 expect(tagContainer).toBeVisible();
             } else {
-                return;
-            }
+                alert("No tags on Activities were found. This may be either because: \n\n- No Wiki in the Activities portlet has assigned tags\n\n-There is an actual issue with tags not being displayed that you may want to double check");
+                }
+        });
+
+        // [jasmine-jquery]
+        /* Checks the current URL until the *web/ part,
+        therefore it should run on UAT as well*/
+        it('has hyperlinks pointing to valid URLs', function() {
+            expect($('aside')).toHaveClass('col-md-3');
         });
 
     });
