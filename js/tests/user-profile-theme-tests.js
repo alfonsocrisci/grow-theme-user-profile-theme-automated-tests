@@ -82,9 +82,20 @@
                 var trimmedhrefs = hrefs.slice(0, hrefs.indexOf("/welcome")); // trim Wiki urls to site URL
 
                 expect(trimmedhrefs).toEqual(siteURL); // compare Wiki site with current site
-
             });
+        });
+    });
 
+    describe('Grow Subscriber portlet', function() {
+         // [jasmine-jquery] Ensures Grow Subscriber portlet is on page
+        it('is present on page', function() {
+            expect('#p_p_id_com_liferay_owxp_subscribe_portlet_OWXPSubscribePortlet_').toBeInDOM();
+        });
+
+    describe('User Card', function() {
+         // [jasmine-jquery] Ensures User Card is on page
+        it('is present on page', function() {
+            expect('#userCard').toBeInDOM();
         });
 
     });
