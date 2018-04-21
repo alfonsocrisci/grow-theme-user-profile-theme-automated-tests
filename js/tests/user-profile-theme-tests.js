@@ -71,10 +71,10 @@
         });
 
         // [jasmine-jquery]
-        /* Checks the current URL until the *web/ part,
-        therefore it should run on UAT as well*/
+        /* Checks the current URL + /web/ and compares it
+        to the URLs in the Activities portlet*/
         it('has hyperlinks pointing to valid URLs', function() {
-            expect($('aside')).toHaveClass('col-md-3');
+
         });
 
     });
