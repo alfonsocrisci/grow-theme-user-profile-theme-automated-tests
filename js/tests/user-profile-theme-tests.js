@@ -70,10 +70,20 @@
                 }
         });
 
-        // [jasmine-jquery]
+        // [jasmine]
         /* Checks the current URL + /web/ and compares it
         to the URLs in the Activities portlet*/
         it('has hyperlinks pointing to valid URLs', function() {
+            var siteURL = window.location.protocol + "//" + window.location.host;
+            var wikis = $('strong').find('a');
+
+            wikis.each(function() {
+                var hrefs = $(this).attr('href');
+                var trimmedhrefs = hrefs.slice(0, hrefs.indexOf("/web"));
+
+                expect(trimmedhrefs).toEqual(siteURL);
+
+            });
 
         });
 
