@@ -7,16 +7,15 @@
  * since some of these tests may require DOM elements. We want
  * to ensure they don't run until the DOM is ready.
  */
-
- $(function() {
+$(function() {
     describe('User Profile Theme', function() {
 
-         // [jasmine-jquery] User Profile Theme is available in the <head> through its Liferay themeId
+        // [jasmine-jquery] User Profile Theme is available in the <head> through its Liferay themeId
         it('is present on page', function() {
             expect($('head')).toContainText('frontenduserprofilegrow_WAR_growthemeuserprofile');
         });
 
-         // [jasmine-jquery] The page has the intended Bootstrap layout classes
+        // [jasmine-jquery] The page has the intended Bootstrap layout classes
         it('has the intended layout', function() {
             expect($('aside')).toHaveClass('col-md-3');
             expect($('section')).toHaveClass("col-md-9");
@@ -34,7 +33,7 @@
         it('is relevant for the currently logged user', function() {
             // Get currently logged user name from URL
             var pageUrl = window.location.href;
-            var urlUserName = pageUrl.substring(pageUrl.lastIndexOf("/")+1,pageUrl.lastIndexOf(".")).toLowerCase();
+            var urlUserName = pageUrl.substring(pageUrl.lastIndexOf("/") + 1, pageUrl.lastIndexOf(".")).toLowerCase();
 
             // Get Logged user name from Activities portlet's header
             var activitiesPortletHeader = $('th').text();
@@ -46,12 +45,16 @@
 
         // [jasmine-jquery]
         it('has preview text with 16px font size', function() {
-            expect($('h6')).toHaveCss({"font-size": "16px;"});
+            expect($('h6')).toHaveCss({
+                "font-size": "16px;"
+            });
         });
 
         // [jasmine-jquery]
         it('has views text with 12px font size', function() {
-            expect($('h6 > span')).toHaveCss({"font-size": "12px;"});
+            expect($('h6 > span')).toHaveCss({
+                "font-size": "12px;"
+            });
         });
 
         // [jasmine-jquery]
@@ -68,7 +71,7 @@
                 expect(tagContainer).toBeVisible();
             } else {
                 alert("No tags on Activities were found. This may be either because: \n\n- No Wiki in the Activities portlet has assigned tags\n\n-There is an actual issue with tags not being displayed");
-                }
+            }
         });
 
         // [jasmine] Checks the current URL + /web/ and compares it to the URLs in the Activities portlet
@@ -87,7 +90,7 @@
 
     describe('Grow Subscriber portlet', function() {
 
-         // [jasmine-jquery] Grow Subscriber portlet is on page
+        // [jasmine-jquery] Grow Subscriber portlet is on page
         it('is present on page', function() {
             expect('#p_p_id_com_liferay_owxp_subscribe_portlet_OWXPSubscribePortlet_').toBeInDOM();
         });
@@ -95,7 +98,7 @@
 
     describe('User Card', function() {
 
-         // [jasmine-jquery] User Card is on page
+        // [jasmine-jquery] User Card is on page
         it('is present on page', function() {
             expect('#userCard').toBeInDOM();
         });
@@ -103,13 +106,15 @@
         // [jasmine-jquery]
         it('has the right spacing and appears on the left', function() {
             expect('#userCard').toHaveClass("col-md-3");
-            expect('#userCard').toHaveCss({"float": "left;"});
+            expect('#userCard').toHaveCss({
+                "float": "left;"
+            });
         });
 
         // [jasmine] Compares URL of Loop logo and https://loop.liferay.com/web/guest/home/-/loop/people/_
         it('has hyerlink that leads to a relevant Loop URL', function() {
             var loopHref = $('.loop-icon').attr('href');
-            var loopTrimmedHref = loopHref.slice(0, loopHref.indexOf("_")+1);
+            var loopTrimmedHref = loopHref.slice(0, loopHref.indexOf("_") + 1);
 
             expect(loopTrimmedHref).toEqual('https://loop.liferay.com/web/guest/home/-/loop/people/_');
         });
