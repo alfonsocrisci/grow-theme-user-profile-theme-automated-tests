@@ -91,6 +91,7 @@
         it('is present on page', function() {
             expect('#p_p_id_com_liferay_owxp_subscribe_portlet_OWXPSubscribePortlet_').toBeInDOM();
         });
+    });
 
     describe('User Card', function() {
          // [jasmine-jquery] Ensures User Card is on page
@@ -98,6 +99,10 @@
             expect('#userCard').toBeInDOM();
         });
 
-    });
+        it('has the right spacing and appears on the left', function() {
+            expect('#userCard').toHaveClass("col-md-3");
+            expect('#userCard').toHaveCss({"float": "left;"});
+        });
 
+    });
 }());
