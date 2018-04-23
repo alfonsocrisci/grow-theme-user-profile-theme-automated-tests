@@ -104,5 +104,12 @@
             expect('#userCard').toHaveCss({"float": "left;"});
         });
 
+        it('has hyerlink that leads to a relevant Loop URL', function() {
+            var loopHref = $('.loop-icon').attr('href');
+            var loopTrimmedHref = loopHref.slice(0, loopHref.indexOf("_")+1);
+
+            expect(loopTrimmedHref).toEqual('https://loop.liferay.com/web/guest/home/-/loop/people/_');
+        });
+
     });
 }());
