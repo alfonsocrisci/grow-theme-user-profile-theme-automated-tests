@@ -80,10 +80,10 @@ $(function() {
             var wikis = $('strong').find('a');
 
             wikis.each(function() {
-                var hrefs = $(this).attr('href'); // get Wiki URLs
-                var trimmedhrefs = hrefs.slice(0, hrefs.indexOf("/welcome")); // trim Wiki urls to site URL
+                var wikiHrefs = $(this).attr('href'); // get Wiki URLs
+                var wikiTrimmedHrefs = wikiHrefs.slice(0, wikiHrefs.indexOf("/welcome")); // trim Wiki urls to site URL
 
-                expect(trimmedhrefs).toEqual(siteURL); // compare Wiki site with current site
+                expect(wikiTrimmedHrefs).toEqual(siteURL); // compare Wiki site with current site
             });
         });
     });
