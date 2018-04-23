@@ -10,12 +10,13 @@
 
  $(function() {
     describe('User Profile Theme', function() {
-         // [jasmine-jquery] Ensures the User Profile Theme is available in the <head> through its Liferay themeId
+
+         // [jasmine-jquery] User Profile Theme is available in the <head> through its Liferay themeId
         it('is present on page', function() {
             expect($('head')).toContainText('frontenduserprofilegrow_WAR_growthemeuserprofile');
         });
 
-         // [jasmine-jquery] Ensures the page has the intended col-md-3 / col-md-9 layout
+         // [jasmine-jquery] The page has the intended Bootstrap layout classes
         it('has the intended layout', function() {
             expect($('aside')).toHaveClass('col-md-3');
             expect($('section')).toHaveClass("col-md-9");
@@ -23,22 +24,23 @@
     });
 
     describe('Activities portlet', function() {
-        // [jasmine-jquery]
+
+        // [jasmine-jquery] Activities portlet is present on page
         it('is present on page', function() {
             expect('#portlet_com_liferay_social_activities_web_portlet_SocialActivitiesPortlet').toBeInDOM();
         });
 
-        //  [jasmine]
+        //  [jasmine] Compares logged user's first name and name appearing in the Activities portlet
         it('is relevant for the currently logged user', function() {
-            //Get currently logged user name from URL
+            // Get currently logged user name from URL
             var pageUrl = window.location.href;
             var urlUserName = pageUrl.substring(pageUrl.lastIndexOf("/")+1,pageUrl.lastIndexOf(".")).toLowerCase();
 
-            //Get Logged user name from Activities portlet's header
+            // Get Logged user name from Activities portlet's header
             var activitiesPortletHeader = $('th').text();
             var activitiesPortletUserName = activitiesPortletHeader.slice(1, activitiesPortletHeader.indexOf("'")).toLowerCase();
 
-            //Check for strings equality
+            // Check for strings equality
             expect(urlUserName).toEqual(activitiesPortletUserName);
         });
 
@@ -58,21 +60,18 @@
         });
 
         // [jasmine-jquery]
-        /* This spec will only run of at least one tag container
-        element is on the page*/
+        // This spec will only run of at least one Wiki tag container element is on the page
         it('has visible tags', function() {
             var tagContainer = $('.badge.badge-default.badge-sm');
 
             if (tagContainer.length > 0) {
                 expect(tagContainer).toBeVisible();
             } else {
-                alert("No tags on Activities were found. This may be either because: \n\n- No Wiki in the Activities portlet has assigned tags\n\n-There is an actual issue with tags not being displayed that you may want to double check");
+                alert("No tags on Activities were found. This may be either because: \n\n- No Wiki in the Activities portlet has assigned tags\n\n-There is an actual issue with tags not being displayed");
                 }
         });
 
-        // [jasmine]
-        /* Checks the current URL + /web/ and compares it
-        to the URLs in the Activities portlet*/
+        // [jasmine] Checks the current URL + /web/ and compares it to the URLs in the Activities portlet
         it('has hyperlinks pointing to valid URLs', function() {
             var siteURL = window.location.protocol + "//" + window.location.host; // get current site
             var wikis = $('strong').find('a');
@@ -87,23 +86,27 @@
     });
 
     describe('Grow Subscriber portlet', function() {
-         // [jasmine-jquery] Ensures Grow Subscriber portlet is on page
+
+         // [jasmine-jquery] Grow Subscriber portlet is on page
         it('is present on page', function() {
             expect('#p_p_id_com_liferay_owxp_subscribe_portlet_OWXPSubscribePortlet_').toBeInDOM();
         });
     });
 
     describe('User Card', function() {
-         // [jasmine-jquery] Ensures User Card is on page
+
+         // [jasmine-jquery] User Card is on page
         it('is present on page', function() {
             expect('#userCard').toBeInDOM();
         });
 
+        // [jasmine-jquery]
         it('has the right spacing and appears on the left', function() {
             expect('#userCard').toHaveClass("col-md-3");
             expect('#userCard').toHaveCss({"float": "left;"});
         });
 
+        // [jasmine] Compares URL of Loop logo and https://loop.liferay.com/web/guest/home/-/loop/people/_
         it('has hyerlink that leads to a relevant Loop URL', function() {
             var loopHref = $('.loop-icon').attr('href');
             var loopTrimmedHref = loopHref.slice(0, loopHref.indexOf("_")+1);
