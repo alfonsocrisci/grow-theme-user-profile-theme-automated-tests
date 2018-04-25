@@ -87,6 +87,13 @@ $(function() {
             });
         });
 
+        it('is present on page', function() {
+            expect('#userCard').toBeInDOM();
+        });
+    });
+
+    describe('Activity selector', function() {
+
         // [jasmine][jasmine-jquery] Checks if the Activity selector function fires upon change event
         it('calls filterByActivityType function on Activity selector change event', function() {
 
@@ -96,7 +103,6 @@ $(function() {
 
             expect(window.filterByActivityType).toHaveBeenCalled();
         });
-
     });
 
     describe('Grow Subscriber portlet', function() {
