@@ -98,7 +98,7 @@ $(function() {
         // [jasmine][jasmine-jquery] Checks if the Activity selector function fires upon change event
         it('calls filterByActivityType function on Activity selector change event', function() {
 
-            spyOn(window,'filterByActivityType'); // This function can be found at: OWXP/modules/social-activity-customizer/social-activity-customizer-core-jsp/src/main/resources/META-INF/jsps/html/taglib/ui/social_activities/page.jsp
+            spyOn(window, 'filterByActivityType'); // This function can be found at: OWXP/modules/social-activity-customizer/social-activity-customizer-core-jsp/src/main/resources/META-INF/jsps/html/taglib/ui/social_activities/page.jsp
 
             $("#_com_liferay_social_activities_web_portlet_SocialActivitiesPortlet_user-activity-selector").trigger('change');
 

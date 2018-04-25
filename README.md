@@ -68,6 +68,8 @@ The tests ensure that the:
 - has the right spacing and appears on the left
 - has hyerlink that leads to a relevant Loop URL
 
+The library used ([jasmine] / [jasmine-jquery]) is specified in comments at the top of each spec, in the [user-profile-theme-tests.js](https://github.com/alffox/grow-theme-user-profile-theme-automated-tests/blob/master/js/tests/user-profile-theme-tests.js) file
+
 ## External libraries used
 
 - [Jasmine](https://jasmine.github.io/) - v. 3.1.0
