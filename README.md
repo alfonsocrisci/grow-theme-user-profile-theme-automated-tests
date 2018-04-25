@@ -1,3 +1,4 @@
+ --- *Powered* **by** [Jasmine](https://jasmine.github.io/)
 # Grow Theme User Profile automated tests
 
 ## Scope of the project
@@ -15,27 +16,29 @@ This project aims to automate front-end tests for a Liferay DXP intranet page st
 - The JS file where your tests specs are coded. For this project, [user-profile-theme-tests.js](https://github.com/alffox/grow-theme-user-profile-theme-automated-tests/blob/master/js/tests/user-profile-theme-tests.js)
 
 2) Include them in your HTML through portal_normal.ftl:
-
-```<head>
-    <link rel="stylesheet" href="${javascript_folder}/libs/jasmine-3.1.0/jasmine.css">
-
-    <script src="${javascript_folder}/libs/jasmine-3.1.0/jasmine.js"></script>
-
-    <script src="${javascript_folder}/libs/jasmine-3.1.0/jasmine-html.js"></script>
-
-    <script src="${javascript_folder}/libs/jasmine-3.1.0/boot.js"></script>
-</head>```
-
-and right before the closing `</body>` tag:
-
 ```
-<script src="${javascript_folder}/libs/jasmine-3.1.0/jasmine-jquery.js"></script>
+    <head>
+        <link rel="stylesheet" href="${javascript_folder}/libs/jasmine-3.1.0/jasmine.css">
 
-<script src="${javascript_folder}/tests/user-profile-theme-tests.js"></script>
+        <script src="${javascript_folder}/libs/jasmine-3.1.0/jasmine.js"></script>
+
+        <script src="${javascript_folder}/libs/jasmine-3.1.0/jasmine-html.js"></script>
+
+        <script src="${javascript_folder}/libs/jasmine-3.1.0/boot.js"></script>
+    </head>
+```
+and right before the closing `</body>` tag:
+```
+    <script src="${javascript_folder}/libs/jasmine-3.1.0/jasmine-jquery.js"></script>
+
+    <script src="${javascript_folder}/tests/user-profile-theme-tests.js"></script>
 ```
 You may see an example here: [portal_normal.ftl](https://github.com/alffox/grow-theme-user-profile-theme-automated-tests/blob/master/templates/portal_normal.ftl)
 
-3) Compile and deploy your theme, apply the theme to a page, the tests should run as the page loads and should be visible at the bottom
+3) Compile and deploy your theme, apply the theme to a page, the tests should run as the page loads and should be visible at the bottom:
+
+[![A screenshot of the tests as they will appear](../images/preview.png)]
+
 
 ## Specs
 
@@ -68,5 +71,5 @@ The tests ensure that the:
 
 ## External libraries used
 
-- [Jasmine](https://jasmine.github.io/) v. 3.1.0
-- [Jasmine-Jquery](https://github.com/velesin/jasmine-jquery) v. 2.1.1
+- [Jasmine](https://jasmine.github.io/) - v. 3.1.0
+- [Jasmine-Jquery](https://github.com/velesin/jasmine-jquery) - v. 2.1.1
