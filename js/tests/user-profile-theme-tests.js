@@ -86,10 +86,6 @@ $(function() {
                 expect(wikiTrimmedHrefs).toEqual(siteURL); // compare Wiki site with current site
             });
         });
-
-        it('is present on page', function() {
-            expect('#userCard').toBeInDOM();
-        });
     });
 
     describe('Activity selector', function() {
