@@ -36,7 +36,7 @@ You may see an example here: [portal_normal.ftl](https://github.com/alffox/grow-
 
 3) Compile and deploy your theme, apply the theme to a page, the tests should run as the page loads and should be visible at the bottom:
 
-(https://github.com/alffox/grow-theme-user-profile-theme-automated-tests/blob/master/images/preview.png)
+[](https://github.com/alffox/grow-theme-user-profile-theme-automated-tests/blob/master/images/preview.png)
 
 
 ## Specs
