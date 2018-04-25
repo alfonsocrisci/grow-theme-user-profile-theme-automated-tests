@@ -94,6 +94,11 @@ $(function() {
 
     describe('Activity selector', function() {
 
+        // [jasmine-jquery]
+        it('is present on page', function() {
+            expect('#_com_liferay_social_activities_web_portlet_SocialActivitiesPortlet_user-activity-selector').toBeInDOM();
+        });
+
         // [jasmine][jasmine-jquery] Checks if the Activity selector function fires upon change event
         it('calls filterByActivityType function on Activity selector change event', function() {
 
