@@ -1,7 +1,7 @@
 # Grow Theme User Profile automated tests
 
 ## Scope of the project
-This project aims to automate front-end tests for a Liferay DXP intranet page styled wit ha custom theme
+This project aims to automate front-end tests for a Liferay DXP intranet page styled with a custom theme
 
 ## How to run the project
 1) Get the necessary files for Jasmine and Jasmine-Jquery:
